@@ -16,7 +16,7 @@ public class AplikasiDataNilai extends JFrame {
         // Pengaturan Frame
         setTitle("Aplikasi Data Nilai - Pertemuan 6");
         setSize(400, 400);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        shttps://gemini.google.com/app/bb58b08617e4b6e7?pli=1etDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null);
 
@@ -72,7 +72,7 @@ public class AplikasiDataNilai extends JFrame {
         btnHapus.setBounds(240, 250, 100, 30);
         add(btnHapus);
 
-        // --- EVENT HANDLING (Sesuai Materi Pertemuan 6) ---
+        // --- EVENT HANDLING  ---
 
         // A. Pencarian Data (Berdasarkan Nama)
         btnCari.addActionListener(new ActionListener() {
@@ -131,8 +131,7 @@ public class AplikasiDataNilai extends JFrame {
                         PreparedStatement pS = Lconnection.prepareStatement("DELETE FROM datanil WHERE nim=?");
                         pS.setString(1, nimTF.getText());
 
-                        // Catatan: Pada materi slide tertulis pS.executeDelete(), 
-                        // namun sintaks Java standar yang benar adalah executeUpdate()
+                        
                         if (pS.executeUpdate() > 0) {
                             JOptionPane.showMessageDialog(null, "Data Telah Dihapus", "Informasi", JOptionPane.INFORMATION_MESSAGE);
                             kosongkanField(); // Panggil fungsi untuk mengosongkan textfield
